@@ -1,0 +1,127 @@
+
+  #menu {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+
+    border-style: solid;
+    border-width: 5px;
+    width: 5em;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    font-size: 85%;
+}
+
+
+  .fade {
+    height: 3.5em;
+    -webkit-transition: height 0.2s, width 0.05s, background 0.2s, color 0.2s, border-color 0.2s; /* Safari 3.1 to 6.0 */
+    transition: height 0.2s, width 0.05s, background 0.2s, color 0.2s, border-color 0.2s;
+
+    background: rgba(255,255,255,0.25);
+    color: rgb(255,255,255);
+    border-color: rgba(255,255,255,1);
+   }
+
+ .fade:hover {
+    height: 100%;
+    color: rgb(1,1,1);
+    background: rgba(255,255,255,0.8);
+    border-color: black;
+  }
+
+
+.arrow-wrap {
+  cursor: pointer;
+  position:fixed;
+  z-index:1;
+  right:60px;
+  top:80%;
+  margin-left:-50px;
+  background:#111;
+  width:60px;
+  height:30px;
+  padding:20px 20px;
+  border-radius:50%;
+  font-size:16px;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+  opacity: 0.4;
+}
+
+.arrow-wrap2 {
+  cursor: pointer;
+  position:fixed;
+  z-index:1;
+  right:20px;
+  top:5%;
+  margin-left:-50px;
+  background:#111;
+  width:60px;
+  height:30px;
+  padding:20px 20px;
+  border-radius:50%;
+  font-size:16px;
+  display:block;
+  opacity: 0.2;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+}
+
+.arrow-wrap:hover {
+  opacity: 0.5;
+}
+
+.arrow-wrap2:hover {
+  opacity: 0.5;
+}
+
+/* a triangle to make the main part of the arrow. Adjust the border-color to fit your needs */
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
+
+/* a pseudo element arrow placed on top of the other one with the same color as the wrapper */
+.arrow:after {
+  content:'';
+  position:fixed;
+  top:-42px;
+  left:-30px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
+  @-webkit-keyframes arrows {
+    0% { top:80%; }
+    10% { top:85%; }
+    20% { top:80%; }
+    30% { top:85%; }
+    40% { top:80%; }
+  }
+
+  @-moz-keyframes arrows {
+    0% { top:80%; }
+    10% { top:85%; }
+    20% { top:80%; }
+    30% { top:85%; }
+    40% { top:80%; }
+  }
+  
+  .arrow-wrap {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+    -moz-animation: arrows 2.8s 0.4s;
+    -moz-animation-delay: 3s;
+  }

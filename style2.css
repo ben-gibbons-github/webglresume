@@ -1,0 +1,285 @@
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    width: 100%;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .parallax__layer--fore {
+
+    width: 100%;
+  }
+
+  .parallax__layer--base {
+
+    width: 100%;
+  }
+
+  .parallax__layer--back {
+    width: 100%;
+  }
+
+  .parallax__layer--deep {
+
+
+    width: 100%;
+  }
+
+
+  .parallax__group {
+    width: 100%;
+  }
+
+  body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+
+    position: absolute;
+    top: 20%;
+
+    text-align: center;
+    background: rgba(230,230,230,0.65);
+	  color: black;
+
+	  font-weight: 600;
+    padding: .5em;
+    width: 100%;
+    white-space: nowrap;
+	  border-style: solid;
+    border-width: 2px;
+    border-color: black;
+	}
+
+  .subtitle {
+    font-size: 50%;
+  }
+
+  .subtitlered {
+    font-size: 50%;
+    color: rgb(200,0,0);
+  }
+
+  .subtitle2 {
+    font-size: 75%;
+  }
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+
+  #group1 .parallax__layer--base {
+  
+    background: url("nerd.jpg");
+    background-color: rgba(50,50,255,1);
+  	background-repeat: no-repeat;
+  	background-size: auto 100%;
+    background-position: center; 
+
+     background-image: url(nerd.jpg);
+
+  }
+
+ #rcorners1 {
+    border-radius: 75px;
+    vertical-align: middle;
+		
+  	border-style: solid;
+    border-width: 1px;
+    border-color: black;
+  }
+
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+  #group2 .parallax__layer--back {
+
+    background: url("psw.jpg");
+    background-color: rgba(150,50,255,1);
+  	background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center; 
+
+     background-image: 
+     url(psw.jpg)
+    ;
+  }
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group3 .parallax__layer--base {
+    
+    background: url("notepadpp2.jpg");
+    background-color: rgba(200,200,200,1);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center; 
+  }
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax__layer--deep {
+
+    background: url("sunrise2.jpg");
+    background-color: rgba(255,150,0,1);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center; 
+  }
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+
+    background: url("avid.jpg");
+    background-color: rgba(200,100,250,1);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center; 
+
+  }
+  #group5 .parallax__layer--base {
+  
+  }
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+  #group6 .parallax__layer--back {
+  
+    background: url("banner2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+  }
+
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+    border-style: solid;
+    border-width: 0px;
+    border-color: white;
+    background-color: white;
+    box-shadow: 0 0 20px 20px white;
+  }
+  #group7 .parallax__layer--base {
+    
+
+  }
+
+  #menu {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+
+  	border-style: solid;
+    border-width: 5px;
+    width: 5em;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    font-size: 85%;
+}
+
+
+  .fade {
+    height: 3.5em;
+    -webkit-transition: height 0.2s, width 0.05s, background 0.2s, color 0.2s, border-color 0.2s; /* Safari 3.1 to 6.0 */
+    transition: height 0.2s, width 0.05s, background 0.2s, color 0.2s, border-color 0.2s;
+
+    background: rgba(255,255,255,0.25);
+    color: rgb(255,255,255);
+    border-color: rgba(255,255,255,1);
+   }
+
+ .fade:hover {
+    height: 100%;
+    color: rgb(1,1,1);
+    background: rgba(255,255,255,0.8);
+    border-color: black;
+  }
+
+  
+.arrow-wrap {
+  cursor: pointer;
+  position:fixed;
+  z-index:1;
+  left:80%;
+  top:80%;
+  margin-left:-50px;
+  background:#111;
+  width:60px;
+  height:60px;
+  padding:20px 20px;
+  border-radius:50%;
+  font-size:16px;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+  opacity: 0.5;
+}
+
+.arrow-wrap:hover {
+  opacity: 1;
+}
+
+/* a triangle to make the main part of the arrow. Adjust the border-color to fit your needs */
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
+
+/* a pseudo element arrow placed on top of the other one with the same color as the wrapper */
+.arrow:after {
+  content:'';
+  position:fixed;
+  top:-42px;
+  left:-30px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
