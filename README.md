@@ -1,3 +1,5 @@
+<img src="http://bgibbonsweb.github.io/webgltitle.jpg"/>
+
 # webglresume
 My 3D interactive resume
 
